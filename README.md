@@ -1,2 +1,3 @@
 # 3D-Website
-Makin a cool 3D-Website in a-Frame, wich is a web framework for building virtual reality (VR) experiences.
+Making a cool 3D-Website in a-Frame, wich is a web framework for building virtual reality (VR) experiences. This 3D website provides an immersive and interactive exploration of the solar system. It is designed using A-Frame, allowing users to move around and observe the planets in a simulated space environment.The website features realistic representations of the major planets in our solar system, including the Sun, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Each planet is textured with real images from space missions to give an authentic visual experience.
+
