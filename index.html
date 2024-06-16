@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>3D Solar System with A-Frame</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      .hud {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hud">
+      <h1>Explore the Solar System</h1>
+      <p>Use your mouse or touch to look around. Use W/A/S/D or arrow keys to move.</p>
+    </div>
+    <a-scene>
+      <!-- Assets -->
+      <a-assets>
+        <img id="starTexture" src="path_to_your_uploaded_image.png">
+      </a-assets>
+
+      <!-- Sky with stars -->
+      <a-sky src="#starTexture"></a-sky>
+
+      <!-- Sun -->
+      <a-light type="point" intensity="1" position="0 0 0" color="#FFD700"></a-light>
+      <a-sphere position="0 0 0" radius="2" color="#FFD700" material="emissive: #FFD700; emissiveIntensity: 0.8;"></a-sphere>
+
+      <!-- Mercury -->
+      <a-sphere position="3 0 -5" radius="0.3" rotation="0 45 0" material="shader: flat; src: url(https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg)"></a-sphere>
+
+      <!-- Venus -->
+      <a-sphere position="6 0 -5" radius="0.6" rotation="0 45 0" material="shader: flat; src: url(https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg)"></a-sphere>
+
+      <!-- Earth -->
+      <a-sphere position="9 0 -5" radius="0.65" rotation="0 45 0" material="shader: flat; src: url(https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg)"></a-sphere>
+
+      <!-- Mars -->
+      <a-sphere position="12 0 -5" radius="0.35" rotation="0 45 0" material="shader: flat; src: url(https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg)"></a-sphere>
+
+      <!-- Jupiter -->
+      <a-sphere position="18 0 -5" radius="1.1" rotation="0 45 0" material="shader: flat; src: url(https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg)"></a-sphere>
+
+      <!-- Saturn -->
+      <a-sphere position="24 0 -5" radius="0.95" rotation="0 45 0" material="shader: flat; src: url(https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg)"></a-sphere>
+      <a-ring position="24 0 -5" rotation="90 0 0" radius-inner="1.2" radius-outer="1.8" color="#C2B280"></a-ring>
+
+      <!-- Uranus -->
+      <a-sphere position="30 0 -5" radius="0.7" rotation="0 45 0" material="shader: flat; src: url(https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg)"></a-sphere>
+
+      <!-- Neptune -->
+      <a-sphere position="36 0 -5" radius="0.65" rotation="0 45 0" material="shader: flat; src: url(https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg)"></a-sphere>
+
+      <!-- Camera with movement controls -->
+      <a-entity camera wasd-controls look-controls position="0 1.6 15"></a-entity>
+    </a-scene>
+  </body>
+</html>
